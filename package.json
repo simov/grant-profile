@@ -1,0 +1,54 @@
+{
+  "name": "grant-profile",
+  "version": "0.0.0",
+  "description": "User profile middleware for Grant",
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "https://github.com/simov/grant-profile",
+  "author": "Simeon Velichkov <simeonvelichkov@gmail.com> (https://simov.github.io)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simov/grant-profile.git"
+  },
+  "dependencies": {
+    "request-compose": "^1.2.0",
+    "request-oauth": "0.0.3"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "grant": "^4.5.0",
+    "hapi": "^18.1.0",
+    "istanbul": "1.1.0-alpha.1",
+    "koa": "^2.7.0",
+    "koa-mount": "^4.0.0",
+    "koa-qs": "^2.0.0",
+    "koa-session": "^5.10.1",
+    "mocha": "^6.0.2",
+    "qs": "^6.7.0",
+    "request-cookie": "0.0.2",
+    "request-logs": "0.0.5",
+    "yar": "^9.1.0"
+  },
+  "peerDependencies": {
+    "grant": "^4.5.0"
+  },
+  "main": "./profile.js",
+  "files": [
+    "config/",
+    "lib/",
+    "LICENSE",
+    "package.json",
+    "profile.js",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "npm run test:ci",
+    "test:ci": "mocha test/ --recursive",
+    "test:cov": "istanbul cover _mocha -- --recursive"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

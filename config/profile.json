@@ -1,0 +1,564 @@
+{
+  "23andme": {
+    "url": "https://api.23andme.com/3/account/"
+  },
+  "500px": {
+    "url": "https://api.500px.com/v1/users"
+  },
+  "acton": {
+    "url": "https://restapi.actonsoftware.com/api/1/account"
+  },
+  "acuityscheduling": {
+    "url": "https://acuityscheduling.com/api/v1/me"
+  },
+  "aha": {
+    "url": "https://[subdomain].aha.io/api/v1/me"
+  },
+  "amazon": {
+    "url": "https://api.amazon.com/user/profile",
+    "tested": true
+  },
+  "angellist": {
+    "url": "https://api.angel.co/1/me"
+  },
+  "arcgis": {
+    "url": "https://www.arcgis.com/sharing/rest/community/self"
+  },
+  "asana": {
+    "url": "https://app.asana.com/api/1.0/users/me",
+    "tested": true
+  },
+  "assembla": {
+    "url": "https://api.assembla.com/v1/user.json"
+  },
+  "auth0": {
+    "url": "https://[subdomain].auth0.com/userinfo",
+    "tested": true
+  },
+  "authentiq": {
+    "url": "https://connect.authentiq.io/userinfo"
+  },
+  "axosoft": {
+    "url": "https://[subdomain].axosoft.com/api/v5/me"
+  },
+  "baidu": {
+    "url": "https://openapi.baidu.com/rest/2.0/passport/users/getLoggedInUser"
+  },
+  "basecamp": {
+    "url": "https://launchpad.37signals.com/authorization.json"
+  },
+  "battlenet": {
+    "url": "https://[subdomain].battle.net/oauth/userinfo"
+  },
+  "beatport": {
+    "url": "https://oauth-api.beatport.com/identity/1/person"
+  },
+  "bitbucket": {
+    "url": "https://api.bitbucket.org/2.0/users/{endpoint}"
+  },
+  "bitly": {
+    "url": "https://api-ssl.bitly.com/v4/user"
+  },
+  "box": {
+    "url": "https://api.box.com/2.0/users/me"
+  },
+  "buffer": {
+    "url": "https://api.bufferapp.com/1/user.json"
+  },
+  "campaignmonitor": {
+    "url": "https://api.createsend.com/api/v3.1/clients.json"
+  },
+  "cheddar": {
+    "url": "https://api.cheddarapp.com/v1/me"
+  },
+  "clio": {
+    "url": ""
+  },
+  "coinbase": {
+    "url": "https://api.coinbase.com/v1/users/self"
+  },
+  "concur": {
+    "url": ""
+  },
+  "constantcontact": {
+    "url": "https://api.constantcontact.com/v2/account/info"
+  },
+  "coursera": {
+    "url": "https://api.coursera.org/api/externalBasicProfiles.v1"
+  },
+  "dailymile": {
+    "url": "https://api.dailymile.com/people/me.json"
+  },
+  "dailymotion": {
+    "url": "https://api.dailymotion.com/user/me"
+  },
+  "deezer": {
+    "url": "http://api.deezer.com/user/me"
+  },
+  "delivery": {
+    "url": "https://api.delivery.com/customer/account"
+  },
+  "deputy": {
+    "url": ""
+  },
+  "deviantart": {
+    "url": "https://www.deviantart.com/api/v1/oauth2/user/whoami"
+  },
+  "digitalocean": {
+    "url": "https://api.digitalocean.com/v2/account"
+  },
+  "discogs": {
+    "url": "https://api.discogs.com/identity"
+  },
+  "discord": {
+    "url": ""
+  },
+  "disqus": {
+    "url": "https://disqus.com/api/3.0/users/details.json"
+  },
+  "docusign": {
+    "url": ""
+  },
+  "dribbble": {
+    "url": "https://api.dribbble.com/v1/user"
+  },
+  "dropbox": {
+    "url": "https://api.dropbox.com/1/account/info"
+  },
+  "ebay": {
+    "url": ""
+  },
+  "echosign": {
+    "url": "https://api.echosign.com/api/rest/v3/users"
+  },
+  "ecwid": {
+    "url": ""
+  },
+  "edmodo": {
+    "url": "https://api.edmodo.com/users/me"
+  },
+  "egnyte": {
+    "url": ""
+  },
+  "etsy": {
+    "url": "https://openapi.etsy.com/v2/{endpoint}"
+  },
+  "eventbrite": {
+    "url": "https://www.eventbriteapi.com/v3/users/me/"
+  },
+  "evernote": {
+    "url": ""
+  },
+  "everyplay": {
+    "url": "https://api.everyplay.com/me"
+  },
+  "eyeem": {
+    "url": "https://api.eyeem.com/v2/users/me"
+  },
+  "facebook": {
+    "url": "https://graph.facebook.com/me"
+  },
+  "familysearch": {
+    "url": "https://[subdomain]familysearch.org/platform/users/current"
+  },
+  "feedly": {
+    "url": "https://[subdomain].feedly.com/v3/profile"
+  },
+  "fitbit": {
+    "url": "https://api.fitbit.com/1/user/-/profile.json"
+  },
+  "fitbit2": {
+    "url": ""
+  },
+  "flattr": {
+    "url": "https://api.flattr.com/rest/v2/user"
+  },
+  "flickr": {
+    "url": "https://api.flickr.com/services/rest/users"
+  },
+  "flowdock": {
+    "url": "https://api.flowdock.com/v1/{endpoint}"
+  },
+  "fluidsurveys": {
+    "url": ""
+  },
+  "formstack": {
+    "url": ""
+  },
+  "foursquare": {
+    "url": "https://api.foursquare.com/v2/users/self"
+  },
+  "freeagent": {
+    "url": ""
+  },
+  "freelancer": {
+    "url": ""
+  },
+  "freshbooks": {
+    "url": "https://[subdomain].freshbooks.com/api/2.1/xml-in"
+  },
+  "geeklist": {
+    "url": "http://api.geekli.st/v1/{endpoint}"
+  },
+  "genius": {
+    "url": ""
+  },
+  "getbase": {
+    "url": ""
+  },
+  "getpocket": {
+    "url": "https://getpocket.com/v3/users/simov"
+  },
+  "gitbook": {
+    "url": ""
+  },
+  "github": {
+    "url": "https://api.github.com/{endpoint}"
+  },
+  "gitlab": {
+    "url": "https://gitlab.com/api/v3/user"
+  },
+  "gitter": {
+    "url": "https://api.gitter.im/v1/user"
+  },
+  "goodreads": {
+    "url": "https://www.goodreads.com/api/auth_user"
+  },
+  "google": {
+    "url": "https://www.googleapis.com/people/me"
+  },
+  "groove": {
+    "url": ""
+  },
+  "gumroad": {
+    "url": ""
+  },
+  "harvest": {
+    "url": "https://[subdomain].harvestapp.com/account/who_am_i"
+  },
+  "hellosign": {
+    "url": ""
+  },
+  "heroku": {
+    "url": "https://api.heroku.com/account"
+  },
+  "homeaway": {
+    "url": ""
+  },
+  "hootsuite": {
+    "url": ""
+  },
+  "ibm": {
+    "url": ""
+  },
+  "iconfinder": {
+    "url": ""
+  },
+  "idme": {
+    "url": ""
+  },
+  "idonethis": {
+    "url": ""
+  },
+  "imgur": {
+    "url": "https://api.imgur.com/3/account/me.json"
+  },
+  "infusionsoft": {
+    "url": ""
+  },
+  "instagram": {
+    "url": "https://api.instagram.com/v1/users/self"
+  },
+  "intuit": {
+    "url": ""
+  },
+  "jamendo": {
+    "url": ""
+  },
+  "jumplead": {
+    "url": ""
+  },
+  "kakao": {
+    "url": "https://kapi.kakao.com/v1/user/me"
+  },
+  "letsfreckle": {
+    "url": ""
+  },
+  "linkedin": {
+    "url": "https://api.linkedin.com/v1/people/~"
+  },
+  "linkedin2": {
+    "url": ""
+  },
+  "live": {
+    "url": "https://apis.live.net/v5.0/me"
+  },
+  "lyft": {
+    "url": ""
+  },
+  "mailchimp": {
+    "url": "https://[subdomain].api.mailchimp.com/2.0/metadata.json"
+  },
+  "mailup": {
+    "url": ""
+  },
+  "mapmyfitness": {
+    "url": "https://oauth2-api.mapmyapi.com/v7.1/user/self"
+  },
+  "mastodon": {
+    "url": ""
+  },
+  "medium": {
+    "url": ""
+  },
+  "meetup": {
+    "url": "https://api.meetup.com/2/{endpoint}"
+  },
+  "microsoft": {
+    "url": "https://graph.microsoft.com/v1.0/{endpoint}"
+  },
+  "mixcloud": {
+    "url": "https://api.mixcloud.com/me"
+  },
+  "mixer": {
+    "url": ""
+  },
+  "moves": {
+    "url": "https://api.moves-app.com/api/1.1/user/profile"
+  },
+  "moxtra": {
+    "url": ""
+  },
+  "mydigipass": {
+    "url": ""
+  },
+  "myob": {
+    "url": ""
+  },
+  "nest": {
+    "url": ""
+  },
+  "nylas": {
+    "url": ""
+  },
+  "okta": {
+    "url": ""
+  },
+  "onelogin": {
+    "url": ""
+  },
+  "openstreetmap": {
+    "url": "http://api.openstreetmap.org/api/0.6/user/details"
+  },
+  "optimizely": {
+    "url": ""
+  },
+  "patreon": {
+    "url": ""
+  },
+  "paypal": {
+    "url": ""
+  },
+  "pinterest": {
+    "url": ""
+  },
+  "plurk": {
+    "url": "http://www.plurk.com/APP/{endpoint}"
+  },
+  "podio": {
+    "url": "https://api.podio.com/user"
+  },
+  "producteev": {
+    "url": ""
+  },
+  "producthunt": {
+    "url": ""
+  },
+  "projectplace": {
+    "url": ""
+  },
+  "projectplace2": {
+    "url": ""
+  },
+  "pushbullet": {
+    "url": ""
+  },
+  "ravelry": {
+    "url": ""
+  },
+  "redbooth": {
+    "url": "https://redbooth.com/api/3/{endpoint}"
+  },
+  "reddit": {
+    "url": "https://api.reddit.com/me"
+  },
+  "runkeeper": {
+    "url": "https://api.runkeeper.com/user"
+  },
+  "salesforce": {
+    "url": "https://[subdomain].salesforce.com/profile.get"
+  },
+  "shoeboxed": {
+    "url": "https://api.shoeboxed.com/v2/user"
+  },
+  "shopify": {
+    "url": "https://[subdomain].myshopify.com/admin/shop.json"
+  },
+  "skyrock": {
+    "url": "https://api.skyrock.com/v2/user/get.json"
+  },
+  "slack": {
+    "url": "https://slack.com/api/auth.test"
+  },
+  "slice": {
+    "url": "https://api.slice.com/api/v1/users/self"
+  },
+  "smartsheet": {
+    "url": ""
+  },
+  "smugmug": {
+    "url": ""
+  },
+  "socialpilot": {
+    "url": ""
+  },
+  "socrata": {
+    "url": "https://[subdomain]/api/users/current.json"
+  },
+  "soundcloud": {
+    "url": "https://api.soundcloud.com/me.json"
+  },
+  "spotify": {
+    "url": "https://api.spotify.com/v1/me"
+  },
+  "square": {
+    "url": "https://connect.squareup.com/v1/me"
+  },
+  "stackexchange": {
+    "url": "https://api.stackexchange.com/2.2/me"
+  },
+  "stocktwits": {
+    "url": "https://api.stocktwits.com/api/2/account/verify.json"
+  },
+  "stormz": {
+    "url": "https://api.stormz.me/v1/user/me"
+  },
+  "strava": {
+    "url": "https://www.strava.com/api/v3/athlete"
+  },
+  "stripe": {
+    "url": "https://api.stripe.com/v1/account"
+  },
+  "surveygizmo": {
+    "url": "https://restapi.surveygizmo.com/v4/accountuser"
+  },
+  "surveymonkey": {
+    "url": "https://api.surveymonkey.net/v2/users/me"
+  },
+  "thingiverse": {
+    "url": "https://api.thingiverse.com/{endpoint}"
+  },
+  "ticketbud": {
+    "url": ""
+  },
+  "timelyapp": {
+    "url": ""
+  },
+  "todoist": {
+    "url": ""
+  },
+  "trakt": {
+    "url": "https://api-v2launch.trakt.tv/users/me"
+  },
+  "traxo": {
+    "url": "https://api.traxo.com/v2/me"
+  },
+  "trello": {
+    "url": "https://api.trello.com/1/members/me"
+  },
+  "tripit": {
+    "url": "https://api.tripit.com/v1/get/profile"
+  },
+  "tumblr": {
+    "url": "http://api.tumblr.com/v2/user/info"
+  },
+  "twitch": {
+    "url": "https://api.twitch.tv/kraken/user"
+  },
+  "twitter": {
+    "url": "https://api.twitter.com/1.1/users/show.json",
+    "tested": true
+  },
+  "typeform": {
+    "url": ""
+  },
+  "uber": {
+    "url": "https://[subdomain].uber.com/v1/me"
+  },
+  "underarmour": {
+    "url": "https://api.ua.com/v7.1/user/self"
+  },
+  "unsplash": {
+    "url": ""
+  },
+  "upwork": {
+    "url": "https://www.upwork.com/api/info.json"
+  },
+  "uservoice": {
+    "url": "https://[subdomain].uservoice.com/api/v1/users/current.json"
+  },
+  "vend": {
+    "url": "https://[subdomain].vendhq.com/api/users"
+  },
+  "venmo": {
+    "url": ""
+  },
+  "verticalresponse": {
+    "url": ""
+  },
+  "viadeo": {
+    "url": ""
+  },
+  "vimeo": {
+    "url": "https://api.vimeo.com/me"
+  },
+  "visualstudio": {
+    "url": ""
+  },
+  "vk": {
+    "url": "https://api.vk.com/method/users.get"
+  },
+  "weekdone": {
+    "url": ""
+  },
+  "weibo": {
+    "url": "https://api.weibo.com/2/users/show.json"
+  },
+  "withings": {
+    "url": "https://wbsapi.withings.net/v2/{endpoint}"
+  },
+  "wordpress": {
+    "url": "https://public-api.wordpress.com/rest/v1/me"
+  },
+  "wrike": {
+    "url": ""
+  },
+  "xero": {
+    "url": ""
+  },
+  "xing": {
+    "url": "https://api.xing.com/v1/users/me.json"
+  },
+  "yahoo": {
+    "url": ""
+  },
+  "yammer": {
+    "url": "https://www.yammer.com/api/v1/users/current.json"
+  },
+  "yandex": {
+    "url": ""
+  },
+  "zendesk": {
+    "url": "https://[subdomain].zendesk.com/api/v2/users/me.json"
+  }
+}
