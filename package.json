@@ -1,6 +1,6 @@
 {
   "name": "grant-profile",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "User profile middleware for Grant",
   "keywords": [],
   "license": "MIT",
