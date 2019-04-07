@@ -225,7 +225,8 @@
     "url": "https://www.goodreads.com/api/auth_user"
   },
   "google": {
-    "url": "https://www.googleapis.com/people/me"
+    "url": "https://openidconnect.googleapis.com/v1/userinfo",
+    "tested": true
   },
   "groove": {
     "url": ""
