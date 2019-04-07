@@ -43,66 +43,70 @@ profiles.twitter.url = url('/profile_url')
 
 
 describe('middleware', () => {
-  var server
 
-  before(async () => {
-    server = await middleware.express(config)
-    // server = await middleware.koa(config)
-    // server = await middleware.hapi(config)
-  })
+  ;['express', 'koa', 'hapi'].forEach((name) => {
+    describe(name, () => {
+      var server, consumer = name
+      before(async () => {
+        server = await middleware[consumer](config)
+      })
 
-  it('not implemented - missing provider', async () => {
-    var {res, body} = await request({
-      url: url('/connect/grant'),
-      cookie: {}
+      it('not implemented - missing provider', async () => {
+        var {res, body} = await request({
+          url: url('/connect/grant'),
+          cookie: {}
+        })
+        t.deepEqual(
+          body,
+          {error: 'grant-profile: Not implemented!'}
+        )
+      })
+
+      it('not implemented - missing url', async () => {
+        var {res, body} = await request({
+          url: url('/connect/facebook'),
+          cookie: {}
+        })
+        t.deepEqual(
+          body,
+          {error: 'grant-profile: Not implemented!'}
+        )
+      })
+
+      it('oauth2 - success', async () => {
+        var {res, body} = await request({
+          url: url('/connect/google'),
+          cookie: {}
+        })
+        t.equal(
+          body,
+          'Bearer access_token'
+        )
+      })
+
+      it('oauth1 - success', async () => {
+        var {res, body} = await request({
+          url: url('/connect/twitter'),
+          cookie: {}
+        })
+        t.ok(
+          /oauth_token="oauth_token"/.test(body)
+        )
+      })
+
+      it('skip on missing session', async () => {
+        var {res, body} = await request({
+          url: url('/hey'),
+        })
+        t.equal(body, 'hey')
+      })
+
+      after((done) => {
+        /express|koa/.test(consumer)
+          ? server.close(done)
+          : server.stop().then(done)
+      })
     })
-    t.deepEqual(
-      body,
-      {error: 'grant-profile: Not implemented!'}
-    )
   })
 
-  it('not implemented - missing url', async () => {
-    var {res, body} = await request({
-      url: url('/connect/facebook'),
-      cookie: {}
-    })
-    t.deepEqual(
-      body,
-      {error: 'grant-profile: Not implemented!'}
-    )
-  })
-
-  it('oauth2 - success', async () => {
-    var {res, body} = await request({
-      url: url('/connect/google'),
-      cookie: {}
-    })
-    t.equal(
-      body,
-      'Bearer access_token'
-    )
-  })
-
-  it('oauth1 - success', async () => {
-    var {res, body} = await request({
-      url: url('/connect/twitter'),
-      cookie: {}
-    })
-    t.ok(
-      /oauth_token="oauth_token"/.test(body)
-    )
-  })
-
-  it('skip on missing session', async () => {
-    var {res, body} = await request({
-      url: url('/hey'),
-    })
-    t.equal(body, 'hey')
-  })
-
-  after((done) => {
-    server.close(done)
-    // server.stop().then(done)
-  })
 })
