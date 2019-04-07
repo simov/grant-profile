@@ -1,6 +1,8 @@
 
 # grant-profile
 
+[![npm-version]][npm] [![travis-ci]][travis] [![coveralls-status]][coveralls]
+
 > _User profile middleware for **[Grant]**_
 
 - `grant-profile` accepts your Grant configuration.
@@ -97,6 +99,13 @@ server.register([
 }
 ```
 
+  [npm-version]: https://img.shields.io/npm/v/grant-profile.svg?style=flat-square (NPM Version)
+  [travis-ci]: https://img.shields.io/travis/simov/grant-profile/master.svg?style=flat-square (Build Status)
+  [coveralls-status]: https://img.shields.io/coveralls/simov/grant-profile.svg?style=flat-square (Test Coverage)
+
+  [npm]: https://www.npmjs.com/package/grant-profile
+  [travis]: https://travis-ci.org/simov/grant-profile
+  [coveralls]: https://coveralls.io/r/simov/grant-profile?branch=master
 
   [grant]: https://github.com/simov/grant
   [session]: https://github.com/simov/grant#session
