@@ -213,7 +213,7 @@
     "url": ""
   },
   "github": {
-    "url": "https://api.github.com/{endpoint}"
+    "url": "https://api.github.com/user"
   },
   "gitlab": {
     "url": "https://gitlab.com/api/v3/user"
