@@ -54,7 +54,8 @@
     "url": "https://oauth-api.beatport.com/identity/1/person"
   },
   "bitbucket": {
-    "url": "https://api.bitbucket.org/2.0/users/{endpoint}"
+    "url": "https://api.bitbucket.org/2.0/user",
+    "tested": true
   },
   "bitly": {
     "url": "https://api-ssl.bitly.com/v4/user"
@@ -141,7 +142,8 @@
     "url": ""
   },
   "etsy": {
-    "url": "https://openapi.etsy.com/v2/{endpoint}"
+    "url": "https://openapi.etsy.com/v2/users/__SELF__",
+    "tested": true
   },
   "eventbrite": {
     "url": "https://www.eventbriteapi.com/v3/users/me/"
@@ -177,7 +179,8 @@
     "url": "https://api.flickr.com/services/rest/users"
   },
   "flowdock": {
-    "url": "https://api.flowdock.com/v1/{endpoint}"
+    "url": "https://api.flowdock.com/v1/user",
+    "tested": true
   },
   "fluidsurveys": {
     "url": ""
@@ -313,10 +316,12 @@
     "url": ""
   },
   "meetup": {
-    "url": "https://api.meetup.com/2/{endpoint}"
+    "url": "https://api.meetup.com/2/members",
+    "tested": true
   },
   "microsoft": {
-    "url": "https://graph.microsoft.com/v1.0/me"
+    "url": "https://graph.microsoft.com/v1.0/me",
+    "tested": true
   },
   "mixcloud": {
     "url": "https://api.mixcloud.com/me"
@@ -364,7 +369,7 @@
     "url": ""
   },
   "plurk": {
-    "url": "http://www.plurk.com/APP/{endpoint}"
+    "url": "https://www.plurk.com/APP/Profile/getOwnProfile"
   },
   "podio": {
     "url": "https://api.podio.com/user"
@@ -388,7 +393,8 @@
     "url": ""
   },
   "redbooth": {
-    "url": "https://redbooth.com/api/3/{endpoint}"
+    "url": "https://redbooth.com/api/3/me",
+    "tested": true
   },
   "reddit": {
     "url": "https://api.reddit.com/me"
@@ -457,7 +463,8 @@
     "url": "https://api.surveymonkey.net/v2/users/me"
   },
   "thingiverse": {
-    "url": "https://api.thingiverse.com/{endpoint}"
+    "url": "https://api.thingiverse.com/users/me",
+    "tested": true
   },
   "ticketbud": {
     "url": ""
@@ -536,7 +543,8 @@
     "url": "https://api.weibo.com/2/users/show.json"
   },
   "withings": {
-    "url": "https://wbsapi.withings.net/v2/{endpoint}"
+    "url": "https://wbsapi.withings.net/v2/user",
+    "tested": false
   },
   "wordpress": {
     "url": "https://public-api.wordpress.com/rest/v1/me"
