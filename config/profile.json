@@ -316,7 +316,7 @@
     "url": "https://api.meetup.com/2/{endpoint}"
   },
   "microsoft": {
-    "url": "https://graph.microsoft.com/v1.0/{endpoint}"
+    "url": "https://graph.microsoft.com/v1.0/me"
   },
   "mixcloud": {
     "url": "https://api.mixcloud.com/me"
