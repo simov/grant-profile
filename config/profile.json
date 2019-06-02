@@ -292,7 +292,8 @@
     "url": "https://api.linkedin.com/v1/people/~"
   },
   "linkedin2": {
-    "url": ""
+    "url": "https://api.linkedin.com/v2/me",
+    "tested": true
   },
   "live": {
     "url": "https://apis.live.net/v5.0/me"
