@@ -5,100 +5,65 @@ var request = require('request-compose').extend({
   Response: {cookie: require('request-cookie').Response},
 }).client
 
-var middleware = {
-  express: require('./middleware/express'),
-  koa: require('./middleware/koa'),
-  hapi: require('./middleware/hapi'),
+var port = {oauth1: 5000, oauth2: 5001, app: 5002}
+var url = {
+  oauth1: (path) => `http://localhost:${port.oauth1}${path}`,
+  oauth2: (path) => `http://localhost:${port.oauth2}${path}`,
+  app: (path) => `http://localhost:${port.app}${path}`,
 }
 
-var url = (path) => `http://localhost:3000${path}`
-
-var config = {
-  defaults: {
-    callback: '/hi',
-  },
-  grant: {
-    authorize_url: url('/authorize_url'),
-    access_url: url('/access_url'),
-    oauth: 2,
-  },
-  facebook: {
-    authorize_url: url('/authorize_url'),
-    access_url: url('/access_url'),
-  },
-  google: {
-    authorize_url: url('/authorize_url'),
-    access_url: url('/access_url'),
-  },
-  twitter: {
-    request_url: url('/request_url'),
-    authorize_url: url('/authorize_url'),
-    access_url: url('/access_url'),
-  }
-}
-var profiles = require('../config/profile')
-profiles.facebook.url = ''
-profiles.google.url = url('/profile_url')
-profiles.twitter.url = url('/profile_url')
+var provider = require('./util/provider')
+var client = require('./util/client')
 
 
 describe('middleware', () => {
+  var server = {oauth1: null, oauth2: null}
+
+  before(async () => {
+    server.oauth1 = await provider.oauth1(port.oauth1)
+    server.oauth2 = await provider.oauth2(port.oauth2)
+  })
+
+  after((done) => {
+    server.oauth1.close(() => server.oauth2.close(done))
+  })
 
   ;['express', 'koa', 'hapi'].forEach((name) => {
     describe(name, () => {
-      var server, consumer = name
+      var server, grant, consumer = name
+      var config = {
+        defaults: {
+          protocol: 'http', host: `localhost:${port.app}`, callback: '/callback',
+          transport: 'session',
+        },
+        grant: {
+          authorize_url: url.oauth2('/authorize_url'),
+          access_url: url.oauth2('/access_url'),
+          oauth: 2,
+        },
+        facebook: {
+          authorize_url: url.oauth2('/authorize_url'),
+          access_url: url.oauth2('/access_url'),
+        },
+        google: {
+          authorize_url: url.oauth2('/authorize_url'),
+          access_url: url.oauth2('/access_url'),
+        },
+        twitter: {
+          request_url: url.oauth1('/request_url'),
+          authorize_url: url.oauth1('/authorize_url'),
+          access_url: url.oauth1('/access_url'),
+        }
+      }
+      var profiles = require('../config/profile')
+      profiles.facebook.url = ''
+      profiles.google.url = url.oauth2('/profile_url')
+      profiles.twitter.url = url.oauth1('/profile_url')
+
       before(async () => {
-        server = await middleware[consumer](config)
-      })
-
-      it('not implemented - missing provider', async () => {
-        var {res, body} = await request({
-          url: url('/connect/grant'),
-          cookie: {}
-        })
-        t.deepEqual(
-          body,
-          {error: 'grant-profile: Not implemented!'}
-        )
-      })
-
-      it('not implemented - missing url', async () => {
-        var {res, body} = await request({
-          url: url('/connect/facebook'),
-          cookie: {}
-        })
-        t.deepEqual(
-          body,
-          {error: 'grant-profile: Not implemented!'}
-        )
-      })
-
-      it('oauth2 - success', async () => {
-        var {res, body} = await request({
-          url: url('/connect/google'),
-          cookie: {}
-        })
-        t.equal(
-          body,
-          'Bearer access_token'
-        )
-      })
-
-      it('oauth1 - success', async () => {
-        var {res, body} = await request({
-          url: url('/connect/twitter'),
-          cookie: {}
-        })
-        t.ok(
-          /oauth_token="oauth_token"/.test(body)
-        )
-      })
-
-      it('skip on missing session', async () => {
-        var {res, body} = await request({
-          url: url('/hey'),
-        })
-        t.equal(body, 'hey')
+        var obj = await client[consumer](config, port.app)
+        server = obj.server
+        grant = obj.grant
       })
 
       after((done) => {
@@ -106,7 +71,82 @@ describe('middleware', () => {
           ? server.close(done)
           : server.stop().then(done)
       })
+
+      it('not implemented - missing provider', async () => {
+        var {body: {session: {response, profile}}} = await request({
+          url: url.app('/connect/grant'),
+          cookie: {}
+        })
+        t.deepEqual(response, {
+          access_token: 'token',
+          refresh_token: 'refresh',
+          raw: {
+            access_token: 'token',
+            refresh_token: 'refresh',
+            expires_in: 3600
+          }
+        })
+        t.deepEqual(profile, {error: 'grant-profile: Not implemented!'})
+      })
+
+      it('not implemented - missing url', async () => {
+        var {body: {session: {response, profile}}} = await request({
+          url: url.app('/connect/facebook'),
+          cookie: {}
+        })
+        t.deepEqual(response, {
+          access_token: 'token',
+          refresh_token: 'refresh',
+          raw: {
+            access_token: 'token',
+            refresh_token: 'refresh',
+            expires_in: 3600
+          }
+        })
+        t.deepEqual(profile, {error: 'grant-profile: Not implemented!'})
+      })
+
+      it('oauth2 - success', async () => {
+        var {body: {session: {response, profile}}} = await request({
+          url: url.app('/connect/google'),
+          cookie: {}
+        })
+        t.deepEqual(response, {
+          access_token: 'token',
+          refresh_token: 'refresh',
+          raw: {
+            access_token: 'token',
+            refresh_token: 'refresh',
+            expires_in: 3600
+          }
+        })
+        t.deepEqual(profile, {user: 'foo', name: 'bar'})
+      })
+
+      it('oauth1 - success', async () => {
+        var {body: {session: {response, profile}}} = await request({
+          url: url.app('/connect/twitter'),
+          cookie: {}
+        })
+        t.deepEqual(response, {
+          access_token: 'token',
+          access_secret: 'secret',
+          raw: {
+            oauth_token: 'token',
+            oauth_token_secret: 'secret'
+          }
+        })
+        t.deepEqual(profile, {user: 'foo', name: 'bar'})
+      })
+
+      it('skip on missing session', async () => {
+        var {res, body} = await request({
+          url: url.app('/after'),
+        })
+        t.equal(body, 'hey')
+      })
     })
+
   })
 
 })
