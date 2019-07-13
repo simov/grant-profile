@@ -7,7 +7,6 @@ var session = require('express-session')
 
 var Koa = require('koa')
 var koasession = require('koa-session')
-var mount = require('koa-mount')
 var koaqs = require('koa-qs')
 
 var Hapi = require('hapi')
@@ -46,7 +45,7 @@ module.exports = {
     var app = new Koa()
     app.keys = ['grant']
     app.use(koasession(app))
-    app.use(mount(grant))
+    app.use(grant)
     app.use(profile)
     koaqs(app)
 

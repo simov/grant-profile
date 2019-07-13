@@ -36,7 +36,6 @@ express()
 ```js
 var Koa = require('koa')
 var session = require('koa-session')
-var mount = require('koa-mount')
 var grant = require('grant-koa') // or require('grant').koa()
 var profile = require('grant-profile').koa()
 var config = require('./config.json')
@@ -44,7 +43,7 @@ var config = require('./config.json')
 var app = new Koa()
 app.keys = ['grant']
 app.use(session(app))
-app.use(mount(grant(config)))
+app.use(grant(config))
 app.use(profile(config))
 app.use((ctx, next) => {
   if (ctx.path === '/hi') {
