@@ -16,17 +16,16 @@
     "request-oauth": "0.0.3"
   },
   "devDependencies": {
-    "coveralls": "^3.0.3",
-    "express": "^4.16.4",
-    "express-session": "^1.15.6",
-    "grant": "^4.5.1",
+    "coveralls": "^3.0.5",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "grant": "^4.6.1",
     "hapi": "^18.1.0",
     "istanbul": "1.1.0-alpha.1",
     "koa": "^2.7.0",
-    "koa-mount": "^4.0.0",
     "koa-qs": "^2.0.0",
-    "koa-session": "^5.10.1",
-    "mocha": "^6.0.2",
+    "koa-session": "^5.12.2",
+    "mocha": "^6.1.4",
     "request-cookie": "0.0.2",
     "request-logs": "0.0.5",
     "yar": "^9.1.0"
