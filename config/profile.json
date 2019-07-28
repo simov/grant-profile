@@ -307,6 +307,9 @@
   "mailup": {
     "url": ""
   },
+  "mailxpert": {
+    "url": ""
+  },
   "mapmyfitness": {
     "url": "https://oauth2-api.mapmyapi.com/v7.1/user/self"
   },
@@ -426,6 +429,9 @@
   },
   "smugmug": {
     "url": ""
+  },
+  "snapchat": {
+    "url": "https://kit.snapchat.com/v1/me"
   },
   "socialpilot": {
     "url": ""
@@ -570,5 +576,8 @@
   },
   "zendesk": {
     "url": "https://[subdomain].zendesk.com/api/v2/users/me.json"
+  },
+  "zoom": {
+    "url": "https://api.zoom.us/v2/users/me"
   }
 }
