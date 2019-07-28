@@ -27,19 +27,19 @@
     "request-oauth": "0.0.3"
   },
   "devDependencies": {
+    "@hapi/hapi": "^18.3.1",
+    "@hapi/yar": "^9.2.0",
     "coveralls": "^3.0.5",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "grant": "^4.6.1",
-    "hapi": "^18.1.0",
     "istanbul": "1.1.0-alpha.1",
     "koa": "^2.7.0",
     "koa-qs": "^2.0.0",
     "koa-session": "^5.12.2",
     "mocha": "^6.1.4",
     "request-cookie": "0.0.2",
-    "request-logs": "0.0.5",
-    "yar": "^9.1.0"
+    "request-logs": "0.0.5"
   },
   "peerDependencies": {
     "grant": ">=4.5.1"

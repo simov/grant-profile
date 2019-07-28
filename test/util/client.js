@@ -9,8 +9,8 @@ var Koa = require('koa')
 var koasession = require('koa-session')
 var koaqs = require('koa-qs')
 
-var Hapi = require('hapi')
-var yar = require('yar')
+var Hapi = require('@hapi/hapi')
+var yar = require('@hapi/yar')
 
 var Grant = require('grant')
 var Profile = require('../../')
