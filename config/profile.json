@@ -1,88 +1,117 @@
 {
   "23andme": {
-    "url": "https://api.23andme.com/3/account/"
+    "url": "https://api.23andme.com/3/account/",
+    "tested": true
   },
   "500px": {
-    "url": "https://api.500px.com/v1/users"
+    "url": "https://api.500px.com/v1/users",
+    "tested": true
   },
   "acton": {
-    "url": "https://restapi.actonsoftware.com/api/1/account"
+    "url": "https://restapi.actonsoftware.com/api/1/account",
+    "tested": true
   },
   "acuityscheduling": {
-    "url": "https://acuityscheduling.com/api/v1/me"
+    "url": "https://acuityscheduling.com/api/v1/me",
+    "tested": true
   },
   "aha": {
-    "url": "https://[subdomain].aha.io/api/v1/me"
+    "url": "https://[subdomain].aha.io/api/v1/me",
+    "tested": true
   },
   "amazon": {
     "url": "https://api.amazon.com/user/profile",
     "tested": true
   },
   "angellist": {
-    "url": "https://api.angel.co/1/me"
+    "url": "https://api.angel.co/1/me",
+    "tested": true
   },
   "arcgis": {
-    "url": "https://www.arcgis.com/sharing/rest/community/self"
+    "url": "https://www.arcgis.com/sharing/rest/community/self",
+    "tested": true
   },
   "asana": {
     "url": "https://app.asana.com/api/1.0/users/me",
     "tested": true
   },
   "assembla": {
-    "url": "https://api.assembla.com/v1/user.json"
+    "url": "https://api.assembla.com/v1/user.json",
+    "tested": true
+  },
+  "atlassian": {
+    "url": "https://api.atlassian.com/me",
+    "tested": true
   },
   "auth0": {
     "url": "https://[subdomain].auth0.com/userinfo",
     "tested": true
   },
   "authentiq": {
-    "url": "https://connect.authentiq.io/userinfo"
+    "url": "https://connect.authentiq.io/userinfo",
+    "tested": true
+  },
+  "aweber": {
+    "url": "https://api.aweber.com/1.0/accounts/me",
+    "tested": true
   },
   "axosoft": {
-    "url": "https://[subdomain].axosoft.com/api/v5/me"
+    "url": "https://[subdomain].axosoft.com/api/v5/me",
+    "tested": true
   },
   "baidu": {
-    "url": "https://openapi.baidu.com/rest/2.0/passport/users/getLoggedInUser"
+    "url": "https://openapi.baidu.com/rest/2.0/passport/users/getLoggedInUser",
+    "tested": true
   },
   "basecamp": {
-    "url": "https://launchpad.37signals.com/authorization.json"
+    "url": "https://launchpad.37signals.com/authorization.json",
+    "tested": true
   },
   "battlenet": {
-    "url": "https://[subdomain].battle.net/oauth/userinfo"
+    "url": "https://[subdomain].battle.net/oauth/userinfo",
+    "tested": true
   },
   "beatport": {
-    "url": "https://oauth-api.beatport.com/identity/1/person"
+    "url": "https://oauth-api.beatport.com/identity/1/person",
+    "tested": true
   },
   "bitbucket": {
     "url": "https://api.bitbucket.org/2.0/user",
     "tested": true
   },
   "bitly": {
-    "url": "https://api-ssl.bitly.com/v4/user"
+    "url": "https://api-ssl.bitly.com/v4/user",
+    "tested": true
   },
   "box": {
-    "url": "https://api.box.com/2.0/users/me"
+    "url": "https://api.box.com/2.0/users/me",
+    "tested": true
   },
   "buffer": {
-    "url": "https://api.bufferapp.com/1/user.json"
+    "url": "https://api.bufferapp.com/1/user.json",
+    "tested": true
   },
   "campaignmonitor": {
-    "url": "https://api.createsend.com/api/v3.1/clients.json"
+    "url": "https://api.createsend.com/api/v3.1/clients.json",
+    "tested": true
   },
   "cheddar": {
-    "url": "https://api.cheddarapp.com/v1/me"
+    "url": "https://api.cheddarapp.com/v1/me",
+    "tested": true
   },
   "clio": {
     "url": ""
   },
   "coinbase": {
-    "url": "https://api.coinbase.com/v1/users/self"
+    "url": "https://api.coinbase.com/v2/user",
+    "tested": true
   },
   "concur": {
     "url": ""
   },
   "constantcontact": {
-    "url": "https://api.constantcontact.com/v2/account/info"
+    "url": "https://api.constantcontact.com/v2/account/info",
+    "tested": true
   },
   "coursera": {
     "url": "https://api.coursera.org/api/externalBasicProfiles.v1"
@@ -369,6 +398,10 @@
   "paypal": {
     "url": ""
   },
+  "phantauth": {
+    "url": "https://phantauth.net/auth/userinfo",
+    "tested": true
+  },
   "pinterest": {
     "url": ""
   },
@@ -578,6 +611,7 @@
     "url": "https://[subdomain].zendesk.com/api/v2/users/me.json"
   },
   "zoom": {
-    "url": "https://api.zoom.us/v2/users/me"
+    "url": "https://api.zoom.us/v2/users/me",
+    "tested": true
   }
 }
