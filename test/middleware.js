@@ -48,6 +48,7 @@ describe('middleware', () => {
         google: {
           authorize_url: url.oauth2('/authorize_url'),
           access_url: url.oauth2('/access_url'),
+          profile_url: url.oauth2('/profile_url') // grant
         },
         twitter: {
           request_url: url.oauth1('/request_url'),
@@ -55,10 +56,9 @@ describe('middleware', () => {
           access_url: url.oauth1('/access_url'),
         }
       }
-      var profiles = require('../config/profile')
-      profiles.facebook.url = ''
-      profiles.google.url = url.oauth2('/profile_url')
-      profiles.twitter.url = url.oauth1('/profile_url')
+      var profile = require('../config/profile')
+      delete profile.facebook.profile_url
+      profile.twitter.profile_url = url.oauth1('/profile_url') // grant-profile
 
       before(async () => {
         var obj = await client[consumer](config, port.app)
