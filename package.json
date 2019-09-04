@@ -22,8 +22,8 @@
     "url": "https://github.com/simov/grant-profile.git"
   },
   "dependencies": {
-    "qs": "^6.7.0",
-    "request-compose": "^1.2.0",
+    "qs": "^6.8.0",
+    "request-compose": "^1.2.1",
     "request-oauth": "0.0.3"
   },
   "devDependencies": {
@@ -32,7 +32,7 @@
     "coveralls": "^3.0.5",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
-    "grant": "^4.6.1",
+    "grant": "^4.6.3",
     "istanbul": "1.1.0-alpha.1",
     "koa": "^2.7.0",
     "koa-qs": "^2.0.0",
@@ -42,7 +42,7 @@
     "request-logs": "^1.0.0"
   },
   "peerDependencies": {
-    "grant": ">=4.5.1"
+    "grant": ">=4.6.3"
   },
   "main": "./profile.js",
   "files": [
