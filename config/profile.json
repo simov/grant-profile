@@ -1,117 +1,90 @@
 {
   "23andme": {
-    "profile_url": "https://api.23andme.com/3/account/",
-    "tested": true
+    "profile_url": "https://api.23andme.com/3/account/"
   },
   "500px": {
-    "profile_url": "https://api.500px.com/v1/users",
-    "tested": true
+    "profile_url": "https://api.500px.com/v1/users"
   },
   "acton": {
-    "profile_url": "https://restapi.actonsoftware.com/api/1/account",
-    "tested": true
+    "profile_url": "https://restapi.actonsoftware.com/api/1/account"
   },
   "acuityscheduling": {
-    "profile_url": "https://acuityscheduling.com/api/v1/me",
-    "tested": true
+    "profile_url": "https://acuityscheduling.com/api/v1/me"
   },
   "aha": {
-    "profile_url": "https://[subdomain].aha.io/api/v1/me",
-    "tested": true
+    "profile_url": "https://[subdomain].aha.io/api/v1/me"
   },
   "amazon": {
-    "profile_url": "https://api.amazon.com/user/profile",
-    "tested": true
+    "profile_url": "https://api.amazon.com/user/profile"
   },
   "angellist": {
-    "profile_url": "https://api.angel.co/1/me",
-    "tested": true
+    "profile_url": "https://api.angel.co/1/me"
   },
   "arcgis": {
-    "profile_url": "https://www.arcgis.com/sharing/rest/community/self",
-    "tested": true
+    "profile_url": "https://www.arcgis.com/sharing/rest/community/self"
   },
   "asana": {
-    "profile_url": "https://app.asana.com/api/1.0/users/me",
-    "tested": true
+    "profile_url": "https://app.asana.com/api/1.0/users/me"
   },
   "assembla": {
-    "profile_url": "https://api.assembla.com/v1/user.json",
-    "tested": true
+    "profile_url": "https://api.assembla.com/v1/user.json"
   },
   "atlassian": {
-    "profile_url": "https://api.atlassian.com/me",
-    "tested": true
+    "profile_url": "https://api.atlassian.com/me"
   },
   "auth0": {
-    "profile_url": "https://[subdomain].auth0.com/userinfo",
-    "tested": true
+    "profile_url": "https://[subdomain].auth0.com/userinfo"
   },
   "authentiq": {
-    "profile_url": "https://connect.authentiq.io/userinfo",
-    "tested": true
+    "profile_url": "https://connect.authentiq.io/userinfo"
   },
   "aweber": {
-    "profile_url": "https://api.aweber.com/1.0/accounts/me",
-    "tested": true
+    "profile_url": "https://api.aweber.com/1.0/accounts/me"
   },
   "axosoft": {
-    "profile_url": "https://[subdomain].axosoft.com/api/v5/me",
-    "tested": true
+    "profile_url": "https://[subdomain].axosoft.com/api/v5/me"
   },
   "baidu": {
-    "profile_url": "https://openapi.baidu.com/rest/2.0/passport/users/getLoggedInUser",
-    "tested": true
+    "profile_url": "https://openapi.baidu.com/rest/2.0/passport/users/getLoggedInUser"
   },
   "basecamp": {
-    "profile_url": "https://launchpad.37signals.com/authorization.json",
-    "tested": true
+    "profile_url": "https://launchpad.37signals.com/authorization.json"
   },
   "battlenet": {
-    "profile_url": "https://[subdomain].battle.net/oauth/userinfo",
-    "tested": true
+    "profile_url": "https://[subdomain].battle.net/oauth/userinfo"
   },
   "beatport": {
-    "profile_url": "https://oauth-api.beatport.com/identity/1/person",
-    "tested": true
+    "profile_url": "https://oauth-api.beatport.com/identity/1/person"
   },
   "bitbucket": {
-    "profile_url": "https://api.bitbucket.org/2.0/user",
-    "tested": true
+    "profile_url": "https://api.bitbucket.org/2.0/user"
   },
   "bitly": {
-    "profile_url": "https://api-ssl.bitly.com/v4/user",
-    "tested": true
+    "profile_url": "https://api-ssl.bitly.com/v4/user"
   },
   "box": {
-    "profile_url": "https://api.box.com/2.0/users/me",
-    "tested": true
+    "profile_url": "https://api.box.com/2.0/users/me"
   },
   "buffer": {
-    "profile_url": "https://api.bufferapp.com/1/user.json",
-    "tested": true
+    "profile_url": "https://api.bufferapp.com/1/user.json"
   },
   "campaignmonitor": {
-    "profile_url": "https://api.createsend.com/api/v3.1/clients.json",
-    "tested": true
+    "profile_url": "https://api.createsend.com/api/v3.1/clients.json"
   },
   "cheddar": {
-    "profile_url": "https://api.cheddarapp.com/v1/me",
-    "tested": true
+    "profile_url": "https://api.cheddarapp.com/v1/me"
   },
   "clio": {
     "profile_url": ""
   },
   "coinbase": {
-    "profile_url": "https://api.coinbase.com/v2/user",
-    "tested": true
+    "profile_url": "https://api.coinbase.com/v2/user"
   },
   "concur": {
     "profile_url": ""
   },
   "constantcontact": {
-    "profile_url": "https://api.constantcontact.com/v2/account/info",
-    "tested": true
+    "profile_url": "https://api.constantcontact.com/v2/account/info"
   },
   "coursera": {
     "profile_url": "https://api.coursera.org/api/externalBasicProfiles.v1"
@@ -168,8 +141,7 @@
     "profile_url": ""
   },
   "etsy": {
-    "profile_url": "https://openapi.etsy.com/v2/users/__SELF__",
-    "tested": true
+    "profile_url": "https://openapi.etsy.com/v2/users/__SELF__"
   },
   "eventbrite": {
     "profile_url": "https://www.eventbriteapi.com/v3/users/me/"
@@ -202,8 +174,7 @@
     "profile_url": "https://api.flickr.com/services/rest/users"
   },
   "flowdock": {
-    "profile_url": "https://api.flowdock.com/v1/user",
-    "tested": true
+    "profile_url": "https://api.flowdock.com/v1/user"
   },
   "formstack": {
     "profile_url": ""
@@ -248,8 +219,7 @@
     "profile_url": "https://www.goodreads.com/api/auth_user"
   },
   "google": {
-    "profile_url": "https://openidconnect.googleapis.com/v1/userinfo",
-    "tested": true
+    "profile_url": "https://openidconnect.googleapis.com/v1/userinfo"
   },
   "groove": {
     "profile_url": ""
@@ -309,8 +279,7 @@
     "profile_url": "https://api.linkedin.com/v1/people/~"
   },
   "linkedin2": {
-    "profile_url": "https://api.linkedin.com/v2/me",
-    "tested": true
+    "profile_url": "https://api.linkedin.com/v2/me"
   },
   "live": {
     "profile_url": "https://apis.live.net/v5.0/me"
@@ -337,12 +306,13 @@
     "profile_url": ""
   },
   "meetup": {
-    "profile_url": "https://api.meetup.com/2/members",
-    "tested": true
+    "profile_url": "https://api.meetup.com/2/members"
+  },
+  "mention": {
+    "profile_url": ""
   },
   "microsoft": {
-    "profile_url": "https://graph.microsoft.com/v1.0/me",
-    "tested": true
+    "profile_url": "https://graph.microsoft.com/v1.0/me"
   },
   "mixcloud": {
     "profile_url": "https://api.mixcloud.com/me"
@@ -384,8 +354,7 @@
     "profile_url": ""
   },
   "phantauth": {
-    "profile_url": "https://phantauth.net/auth/userinfo",
-    "tested": true
+    "profile_url": "https://phantauth.net/auth/userinfo"
   },
   "pinterest": {
     "profile_url": ""
@@ -408,12 +377,14 @@
   "pushbullet": {
     "profile_url": ""
   },
+  "qq": {
+    "profile_url": ""
+  },
   "ravelry": {
     "profile_url": ""
   },
   "redbooth": {
-    "profile_url": "https://redbooth.com/api/3/me",
-    "tested": true
+    "profile_url": "https://redbooth.com/api/3/me"
   },
   "reddit": {
     "profile_url": "https://api.reddit.com/me"
@@ -485,8 +456,7 @@
     "profile_url": "https://api.surveymonkey.net/v2/users/me"
   },
   "thingiverse": {
-    "profile_url": "https://api.thingiverse.com/users/me",
-    "tested": true
+    "profile_url": "https://api.thingiverse.com/users/me"
   },
   "ticketbud": {
     "profile_url": ""
@@ -516,8 +486,7 @@
     "profile_url": "https://api.twitch.tv/kraken/user"
   },
   "twitter": {
-    "profile_url": "https://api.twitter.com/1.1/users/show.json",
-    "tested": true
+    "profile_url": "https://api.twitter.com/1.1/users/show.json"
   },
   "typeform": {
     "profile_url": ""
@@ -558,6 +527,9 @@
   "vk": {
     "profile_url": "https://api.vk.com/method/users.get"
   },
+  "wechat": {
+    "profile_url": ""
+  },
   "weekdone": {
     "profile_url": ""
   },
@@ -593,7 +565,6 @@
     "profile_url": "https://[subdomain].zendesk.com/api/v2/users/me.json"
   },
   "zoom": {
-    "profile_url": "https://api.zoom.us/v2/users/me",
-    "tested": true
+    "profile_url": "https://api.zoom.us/v2/users/me"
   }
 }
