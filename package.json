@@ -27,16 +27,16 @@
     "request-oauth": "0.0.3"
   },
   "devDependencies": {
-    "@hapi/hapi": "^18.3.1",
-    "@hapi/yar": "^9.2.0",
-    "coveralls": "^3.0.5",
+    "@hapi/hapi": "^18.3.2",
+    "@hapi/yar": "^9.2.1",
+    "coveralls": "^3.0.6",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "grant": "^4.6.3",
     "istanbul": "1.1.0-alpha.1",
-    "koa": "^2.7.0",
+    "koa": "^2.8.1",
     "koa-qs": "^2.0.0",
-    "koa-session": "^5.12.2",
+    "koa-session": "^5.12.3",
     "mocha": "^6.2.0",
     "request-cookie": "0.0.2",
     "request-logs": "^1.0.0"
