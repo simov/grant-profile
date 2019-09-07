@@ -5,11 +5,19 @@
 
 > _User profile middleware for **[Grant]**_
 
-- `grant-profile` accepts your Grant configuration.
-- For Express and Koa `grant-profile` needs to be mounted after Grant and before any of the callback URLs defined in your Grant configuration
-- The result of `grant-profile` is always returned in the [session] as `profile` key
+## Configuration
 
-> _Currently not all of the supported providers in Grant are tested here, or have correct profile URLs. Check out the [profile] configuration for current status._
+> **grant-profile accepts your Grant [configuration][grant-config]**
+
+In addition to that a `profile_url` key can be specified for any provider. This can be used for custom providers, or simply to override the `profile_url` for existing one. Note that in some cases a custom logic might be needed for the internal HTTP [client].
+
+> *Not all of the supported providers in Grant are tested here, or have the correct profile URL set. Check out the [configuration][profile-config] for current status.*
+
+## Middlewares
+
+For Express and Koa grant-profile needs to be mounted after Grant, and before any of the callback URLs defined in your Grant configuration.
+
+Additionally a `profile` key is attached to your [session] containing the user profile data.
 
 ## Express
 
@@ -79,7 +87,7 @@ server.register([
 .then(() => server.start())
 ```
 
-## Configuration
+## Example
 
 > _Used in the above examples._
 
@@ -107,5 +115,7 @@ server.register([
   [coveralls]: https://coveralls.io/r/simov/grant-profile?branch=master
 
   [grant]: https://github.com/simov/grant
+  [grant-config]: https://github.com/simov/grant#configuration
   [session]: https://github.com/simov/grant#session
-  [profile]: https://github.com/simov/grant-profile/blob/master/config/profile.json
+  [profile-config]: https://github.com/simov/grant-profile/blob/master/config/profile.json
+  [client]: https://github.com/simov/grant-profile/blob/master/lib/client.js
