@@ -116,9 +116,6 @@
   "coursera": {
     "profile_url": "https://api.coursera.org/api/externalBasicProfiles.v1"
   },
-  "dailymile": {
-    "profile_url": "https://api.dailymile.com/people/me.json"
-  },
   "dailymotion": {
     "profile_url": "https://api.dailymotion.com/user/me"
   },
@@ -180,9 +177,6 @@
   "evernote": {
     "profile_url": ""
   },
-  "everyplay": {
-    "profile_url": "https://api.everyplay.com/me"
-  },
   "eyeem": {
     "profile_url": "https://api.eyeem.com/v2/users/me"
   },
@@ -210,9 +204,6 @@
   "flowdock": {
     "profile_url": "https://api.flowdock.com/v1/user",
     "tested": true
-  },
-  "fluidsurveys": {
-    "profile_url": ""
   },
   "formstack": {
     "profile_url": ""
@@ -314,9 +305,6 @@
   "kakao": {
     "profile_url": "https://kapi.kakao.com/v1/user/me"
   },
-  "letsfreckle": {
-    "profile_url": ""
-  },
   "linkedin": {
     "profile_url": "https://api.linkedin.com/v1/people/~"
   },
@@ -362,19 +350,16 @@
   "mixer": {
     "profile_url": ""
   },
-  "moves": {
-    "profile_url": "https://api.moves-app.com/api/1.1/user/profile"
-  },
   "moxtra": {
-    "profile_url": ""
-  },
-  "mydigipass": {
     "profile_url": ""
   },
   "myob": {
     "profile_url": ""
   },
   "nest": {
+    "profile_url": ""
+  },
+  "nokotime": {
     "profile_url": ""
   },
   "nylas": {
@@ -410,9 +395,6 @@
   },
   "podio": {
     "profile_url": "https://api.podio.com/user"
-  },
-  "producteev": {
-    "profile_url": ""
   },
   "producthunt": {
     "profile_url": ""
