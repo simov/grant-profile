@@ -75,13 +75,13 @@
     "profile_url": "https://api.cheddarapp.com/v1/me"
   },
   "clio": {
-    "profile_url": ""
+    "profile_url": "https://app.clio.com/api/v4/users/who_am_i.json"
   },
   "coinbase": {
     "profile_url": "https://api.coinbase.com/v2/user"
   },
   "concur": {
-    "profile_url": ""
+    "profile_url": "https://[subdomain].api.concursolutions.com/api/user/v1.0/user"
   },
   "constantcontact": {
     "profile_url": "https://api.constantcontact.com/v2/account/info"
@@ -99,7 +99,7 @@
     "profile_url": "https://api.delivery.com/customer/account"
   },
   "deputy": {
-    "profile_url": ""
+    "profile_url": "https://[subdomain].deputy.com/api/v1/me"
   },
   "deviantart": {
     "profile_url": "https://www.deviantart.com/api/v1/oauth2/user/whoami"
@@ -108,28 +108,28 @@
     "profile_url": "https://api.digitalocean.com/v2/account"
   },
   "discogs": {
-    "profile_url": "https://api.discogs.com/identity"
+    "profile_url": "https://api.discogs.com/oauth/identity"
   },
   "discord": {
-    "profile_url": ""
+    "profile_url": "https://discordapp.com/api/users/@me"
   },
   "disqus": {
     "profile_url": "https://disqus.com/api/3.0/users/details.json"
   },
   "docusign": {
-    "profile_url": ""
+    "profile_url": "https://account.docusign.com/oauth/userinfo"
   },
   "dribbble": {
-    "profile_url": "https://api.dribbble.com/v1/user"
+    "profile_url": "https://api.dribbble.com/v2/user"
   },
   "dropbox": {
-    "profile_url": "https://api.dropbox.com/1/account/info"
+    "profile_url": "https://api.dropboxapi.com/2/users/get_current_account"
   },
   "ebay": {
     "profile_url": ""
   },
   "echosign": {
-    "profile_url": "https://api.echosign.com/api/rest/v3/users"
+    "profile_url": "https://api.echosign.com/api/rest/v6/users"
   },
   "ecwid": {
     "profile_url": ""
@@ -138,7 +138,7 @@
     "profile_url": "https://api.edmodo.com/users/me"
   },
   "egnyte": {
-    "profile_url": ""
+    "profile_url": "https://[subdomain].egnyte.com/puboauth/v1/userinfo"
   },
   "etsy": {
     "profile_url": "https://openapi.etsy.com/v2/users/__SELF__"
@@ -275,6 +275,9 @@
   "kakao": {
     "profile_url": "https://kapi.kakao.com/v1/user/me"
   },
+  "line": {
+    "profile_url": "https://api.line.me/v2/profile"
+  },
   "linkedin": {
     "profile_url": "https://api.linkedin.com/v1/people/~"
   },
@@ -328,6 +331,9 @@
   },
   "nest": {
     "profile_url": ""
+  },
+  "naver": {
+    "profile_url": "https://openapi.naver.com/v1/nid/me"
   },
   "nokotime": {
     "profile_url": ""
