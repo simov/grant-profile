@@ -399,7 +399,7 @@
     "profile_url": "https://api.runkeeper.com/user"
   },
   "salesforce": {
-    "profile_url": "https://[subdomain].salesforce.com/profile.get"
+    "profile_url": "https://login.salesforce.com/services/oauth2/userinfo"
   },
   "shoeboxed": {
     "profile_url": "https://api.shoeboxed.com/v2/user"
