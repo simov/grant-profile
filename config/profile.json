@@ -559,7 +559,7 @@
     "profile_url": "https://api.xing.com/v1/users/me.json"
   },
   "yahoo": {
-    "profile_url": ""
+    "profile_url": "https://api.login.yahoo.com/openid/v1/userinfo"
   },
   "yammer": {
     "profile_url": "https://www.yammer.com/api/v1/users/current.json"
