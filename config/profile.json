@@ -393,7 +393,7 @@
     "profile_url": "https://redbooth.com/api/3/me"
   },
   "reddit": {
-    "profile_url": "https://api.reddit.com/me"
+    "profile_url": "https://oauth.reddit.com/api/v1/me"
   },
   "runkeeper": {
     "profile_url": "https://api.runkeeper.com/user"
