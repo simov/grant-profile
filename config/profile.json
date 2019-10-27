@@ -156,22 +156,19 @@
     "profile_url": "https://graph.facebook.com/me"
   },
   "familysearch": {
-    "profile_url": "https://[subdomain]familysearch.org/platform/users/current"
+    "profile_url": "https://api.familysearch.org/platform/users/current"
   },
   "feedly": {
-    "profile_url": "https://[subdomain].feedly.com/v3/profile"
+    "profile_url": "https://cloud.feedly.com/v3/profile"
   },
   "fitbit": {
     "profile_url": "https://api.fitbit.com/1/user/-/profile.json"
-  },
-  "fitbit2": {
-    "profile_url": ""
   },
   "flattr": {
     "profile_url": "https://api.flattr.com/rest/v2/user"
   },
   "flickr": {
-    "profile_url": "https://api.flickr.com/services/rest/users"
+    "profile_url": "https://api.flickr.com/services/rest/"
   },
   "flowdock": {
     "profile_url": "https://api.flowdock.com/v1/user"
