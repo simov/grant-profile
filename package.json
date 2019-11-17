@@ -1,6 +1,6 @@
 {
   "name": "grant-profile",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "User profile middleware for Grant",
   "keywords": [
     "oauth",
