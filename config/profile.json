@@ -258,7 +258,8 @@
     "profile_url": ""
   },
   "instagram": {
-    "profile_url": "https://api.instagram.com/v1/users/self"
+    "profile_url": "https://graph.instagram.com/me",
+    "profile_url_v1": "https://api.instagram.com/v1/users/self"
   },
   "intuit": {
     "profile_url": ""
