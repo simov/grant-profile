@@ -22,24 +22,24 @@
     "url": "https://github.com/simov/grant-profile.git"
   },
   "dependencies": {
-    "qs": "^6.9.0",
+    "qs": "^6.9.1",
     "request-compose": "^1.2.1",
     "request-oauth": "0.0.3"
   },
   "devDependencies": {
     "@hapi/hapi": "^18.4.0",
     "@hapi/yar": "^9.2.1",
-    "coveralls": "^3.0.7",
+    "coveralls": "^3.0.9",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "grant": "^4.6.3",
     "istanbul": "1.1.0-alpha.1",
-    "koa": "^2.9.0",
+    "koa": "^2.11.0",
     "koa-qs": "^2.0.0",
     "koa-session": "^5.12.3",
-    "mocha": "^6.2.1",
+    "mocha": "^6.2.2",
     "request-cookie": "0.0.2",
-    "request-logs": "^1.0.0"
+    "request-logs": "^1.0.3"
   },
   "peerDependencies": {
     "grant": ">=4.6.3"
