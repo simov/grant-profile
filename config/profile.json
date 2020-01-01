@@ -285,6 +285,9 @@
   "live": {
     "profile_url": "https://apis.live.net/v5.0/me"
   },
+  "livechat": {
+    "profile_url": ""
+  },
   "lyft": {
     "profile_url": ""
   },
@@ -541,8 +544,7 @@
     "profile_url": "https://api.weibo.com/2/users/show.json"
   },
   "withings": {
-    "profile_url": "https://wbsapi.withings.net/v2/user",
-    "tested": false
+    "profile_url": "https://wbsapi.withings.net/v2/user"
   },
   "wordpress": {
     "profile_url": "https://public-api.wordpress.com/rest/v1/me"
@@ -564,6 +566,9 @@
   },
   "yandex": {
     "profile_url": ""
+  },
+  "zeit": {
+    "profile_url": "https://api.zeit.co/www/user"
   },
   "zendesk": {
     "profile_url": "https://[subdomain].zendesk.com/api/v2/users/me.json"
