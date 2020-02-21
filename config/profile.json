@@ -532,7 +532,7 @@
     "profile_url": ""
   },
   "vk": {
-    "profile_url": "https://api.vk.com/method/users.get"
+    "profile_url": "https://api.vk.com/method/users.get?v=5.103"
   },
   "wechat": {
     "profile_url": ""
