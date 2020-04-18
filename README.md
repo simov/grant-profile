@@ -1,110 +1,39 @@
 
 # grant-profile
 
-[![npm-version]][npm] [![travis-ci]][travis] [![coveralls-status]][coveralls]
+<!-- [![npm-version]][npm] [![travis-ci]][travis] [![coveralls-status]][coveralls] -->
 
-> _User profile middleware for **[Grant]**_
+> _User Profile plugin for **[Grant]**_
+
+__NOTE:__ For grant-profile as a middleware for Express, Koa, and Hapi see [v0.x branch][v0]
+
+
+## Use
+
+Pass your [Grant configuration] as the `config` key, and the grant-profile plugin as item in the `extend` array:
+
+```js
+var Grant = require('grant-express|koa|hapi')
+var grant = Grant({
+  config: require('./config.json'),
+  extend: [require('grant-profile')]
+})
+```
 
 ## Configuration
 
-> **grant-profile accepts your Grant [configuration][grant-config]**
+Grant Profile supports one additional configuration option called `profile_url`, that can be set for any provider.
 
-In addition to that a `profile_url` key can be specified for any provider. This can be used for custom providers, or simply to override the `profile_url` for existing one. Note that in some cases a custom logic might be needed for the internal HTTP [client].
+The `profile_url` have to be set for [custom providers].
 
-> *Not all of the supported providers in Grant are tested here, or have the correct profile URL set. Check out the [configuration][profile-config] for current status.*
+It also can be used to override or set the `profile_url` for existing providers. Note that in some cases a custom logic might be needed for the internal [HTTP client].
 
-## Middlewares
+> Not all of the supported providers in Grant are tested here, or have the correct profile URL set. Check out the [configuration][profile-config] for current status.
 
-For Express and Koa grant-profile needs to be mounted after Grant, and before any of the callback URLs defined in your Grant configuration.
+## Response Data
 
-Additionally a `profile` key is attached to your [session] containing the user profile data.
+Additional `profile` key will be added to your [response data] containing the user profile.
 
-## Express
-
-```js
-var express = require('express')
-var session = require('express-session')
-var grant = require('grant-express') // or require('grant').express()
-var profile = require('grant-profile').express()
-var config = require('./config.json')
-
-express()
-  .use(session({secret: 'grant', saveUninitialized: true, resave: true}))
-  .use(grant(config))
-  .use(profile(config))
-  .use('/hi', (req, res) => {
-    var {response, profile} = req.session.grant
-    res.end(JSON.stringify({response, profile}, null, 2))
-  })
-  .listen(3000)
-```
-
-## Koa
-
-```js
-var Koa = require('koa')
-var session = require('koa-session')
-var grant = require('grant-koa') // or require('grant').koa()
-var profile = require('grant-profile').koa()
-var config = require('./config.json')
-
-var app = new Koa()
-app.keys = ['grant']
-app.use(session(app))
-app.use(grant(config))
-app.use(profile(config))
-app.use((ctx, next) => {
-  if (ctx.path === '/hi') {
-    var {response, profile} = ctx.session.grant
-    ctx.body = JSON.stringify({response, profile}, null, 2)
-  }
-})
-app.listen(3000)
-```
-
-## Hapi
-
-```js
-var Hapi = require('hapi')
-var yar = require('yar')
-var grant = require('grant-hapi') // or require('grant').hapi()
-var profile = require('grant-profile').hapi()
-var config = require('./config.json')
-
-var server = new Hapi.Server({host: 'localhost', port: 3000})
-
-server.route({method: 'GET', path: '/hi', handler: (req, res) => {
-  var {response, profile} = req.yar.get('grant')
-  return res.response(JSON.stringify({response, profile}, null, 2))
-  .header('content-type', 'text/plain')
-}})
-
-server.register([
-  {plugin: grant(), options: config},
-  {plugin: profile(), options: config},
-  {plugin: yar, options: {cookieOptions: {password: '01234567890123456789012345678912', isSecure: false}}},
-])
-.then(() => server.start())
-```
-
-## Example
-
-> _Used in the above examples._
-
-```json
-{
-  "defaults": {
-    "protocol": "http",
-    "host": "localhost:3000",
-    "transport": "session",
-    "state": true,
-    "nonce": true,
-    "callback": "/hi"
-  },
-  "google": {"key": "..", "secret": "..", "scope": ["openid", "profile", "email"]},
-  "twitter": {"key": "..", "secret": ".."}
-}
-```
 
   [npm-version]: https://img.shields.io/npm/v/grant-profile.svg?style=flat-square (NPM Version)
   [travis-ci]: https://img.shields.io/travis/simov/grant-profile/master.svg?style=flat-square (Build Status)
@@ -115,7 +44,10 @@ server.register([
   [coveralls]: https://coveralls.io/r/simov/grant-profile?branch=master
 
   [grant]: https://github.com/simov/grant
-  [grant-config]: https://github.com/simov/grant#configuration
-  [session]: https://github.com/simov/grant#session
+  [grant configuration]: https://github.com/simov/grant#configuration
+  [custom providers]: https://github.com/simov/grant#misc-custom-providers
+  [response data]: https://github.com/simov/grant#callback-data
+
+  [v0]: https://github.com/simov/grant-profile/tree/v0
   [profile-config]: https://github.com/simov/grant-profile/blob/master/config/profile.json
-  [client]: https://github.com/simov/grant-profile/blob/master/lib/client.js
+  [http client]: https://github.com/simov/grant-profile/blob/master/profile.js

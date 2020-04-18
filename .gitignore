@@ -1,7 +1,5 @@
-build/
 coverage/
 node_modules/
-.DS_Store
-.idea
+.nyc_output/
 npm-debug.log
 package-lock.json
