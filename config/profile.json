@@ -77,6 +77,9 @@
   "clio": {
     "profile_url": "https://app.clio.com/api/v4/users/who_am_i.json"
   },
+  "cognito": {
+    "profile_url": "https://[subdomain]/oauth2/userInfo"
+  },
   "coinbase": {
     "profile_url": "https://api.coinbase.com/v2/user"
   },
