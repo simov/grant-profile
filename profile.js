@@ -85,13 +85,18 @@ module.exports = () => async ({provider, input, output}) => {
     options = Object.assign(options, before[provider.name](output, provider))
   }
 
-  var body = await request(options)
-    .then(({res, body}) =>
-      after[provider.name]
-        ? after[provider.name]({res, body})
-        : body
-    )
+  try {
+    var body = await request(options)
+      .then(({res, body}) =>
+        after[provider.name]
+          ? after[provider.name]({res, body})
+          : body
+      )
+    output.profile = body
+  }
+  catch (err) {
+    output.profile = {error: err.body || err.message}
+  }
 
-  output.profile = body
   return {provider, input, output}
 }
