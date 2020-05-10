@@ -1,6 +1,6 @@
 {
   "name": "grant-profile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "User profile plugin for Grant",
   "keywords": [
     "oauth",
